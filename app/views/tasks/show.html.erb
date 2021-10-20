@@ -1,0 +1,15 @@
+<div class="container">
+<h1 class = "d-flex justify-content-center">Info about Task</h1>
+<br>
+<p><b> Title:     </b><%= @task.title %> </p>
+<p><b> Details:   </b><%= @task.details %> </p>
+<p><b> Completed: </b><%= @task.completed %> </p>
+<br>
+<%= link_to 'Edit', edit_task_path(@task), class: "btn btn-primary"   %>
+
+<%= link_to 'Remove', task_path(@task), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"  %>
+
+<%= link_to 'Back', tasks_path, class: "btn btn-warning"  %>
+
+<%#= link_to 'Google', 'https://google.com', class: 'link' %>
+</div>
